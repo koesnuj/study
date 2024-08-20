@@ -1,5 +1,4 @@
-# .format
-
+# .format, class 
 import random
 
 SS = "김성재"
