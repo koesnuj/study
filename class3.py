@@ -28,6 +28,5 @@ class sm(Aespa, Redvelvet):
 sm_group = sm('에스파', ['카리나', '윈터', '닝닝', '지젤'], ['NextLevel', 'BlackMamba', 'SuperNova'], "슬기")
 
 sm_group.music()
-print()
 sm_group.like()
 print()
