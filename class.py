@@ -84,7 +84,6 @@ class Redvelvet:
         print(f"{self.name}에는 {members_str}가 있는데 나의 최애는 {self.favorite}다.")
         
 redvelvet = Redvelvet('레드벨벳', ['아이린', '슬기', '예리', '조이', '웬디'], "슬기")
-print()
 
 redvelvet.like()
 print()
