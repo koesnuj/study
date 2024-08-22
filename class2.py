@@ -9,7 +9,6 @@ class aespa:
         songs_str = ", ".join(self.songs)
         print(f'{self.name}의 멤버는 {members_str}이며 \n대표곡은 {songs_str}등이 있다. \n수수수 수퍼노바 노바 캔스탑 하이퍼 스텔라')
 
-
 class Redvelvet:
     def __init__(self, name, members, favorite):
         self.name = name
@@ -20,6 +19,7 @@ class Redvelvet:
         members_str = ", ".join(self.members)
         print(f"{self.name}에는 {members_str}가 있는데 나의 최애는 {self.favorite}다.")
         
+
 class newjeans:
     def __init__(self, name, members, nationality):
         self.name = name
@@ -29,8 +29,7 @@ class newjeans:
     def say(self):
         members_str = ", ".join(self.members)
         nationality_str = ", ".join(self.nationality)
-        print(f"{self.name}는 ADOR 소속 가수이며, 멤버는 {members_str}로 구성되어 있고,\n 국적은 {nationality_str}이다.")
-
+        print(f"{self.name}는 뉴진스, 멤버는 {members_str}로 구성되어 있고,\n국적은 {nationality_str}이다.")
 
 class kpop:
     def __init__(self, aespa_info, redvelvet_info, newjeans_info):
