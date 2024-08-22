@@ -30,13 +30,25 @@ class newjeans:
         members_str = ", ".join(self.members)
         nationality_str = ", ".join(self.nationality)
         print(f"{self.name}는 뉴진스, 멤버는 {members_str}로 구성되어 있고,\n국적은 {nationality_str}이다.")
+        
+class qa:
+    def __init__(self, name, members, lead, new0325):
+        self.name = name
+        self.members = members
+        self.lead = lead
+        self.new0325 = new0325
+        
+    def ovdr(self):
+        membeer_str = ", ".join(self.members)
+        print(f"OVDR {self.name} 챕터는 {self.members}로 구성되어 있고, 챕터장은 {self.lead}다.\n하지만 나는 OVERDARE의 {self.new0325}다.")
 
-class kpop:
-    def __init__(self, aespa_info, redvelvet_info, newjeans_info):
+class idol:
+    def __init__(self, aespa_info, redvelvet_info, newjeans_info, qa_info):
         # 제공된 정보를 사용하여 aespa와 Redvelvet 인스턴스를 생성
         self.aespa_group = aespa(*aespa_info)
         self.redvelvet_group = Redvelvet(*redvelvet_info)
         self.newjeans_group = newjeans(*newjeans_info)
+        self.qa_group = qa(*qa_info)
 
     def introduce_aespa(self):
         self.aespa_group.say()
@@ -46,13 +58,17 @@ class kpop:
         
     def introduce_newjeans(self):
         self.newjeans_group.say()
+        
+    def introduce_qa(self):
+        self.qa_group.ovdr()
 
 
 # 두 그룹에 대한 필요한 정보를 사용하여 SM 클래스의 인스턴스를 생성
-group_info = kpop(
+group_info = idol(
     aespa_info=('에스파', ['카리나', '윈터', '닝닝', '지젤'], ['NextLevel', 'BlackMamba', 'SuperNova']),
     redvelvet_info=('레드벨벳', ['아이린', '슬기', '예리', '조이', '웬디'], '슬기'),
-    newjeans_info=('뉴진스', ['민지', '다니엘', '혜인', '하니', '혜린'], ['대한민국', '호주/대한민국', '대한민국', '대한민국', '호주/베트남', '대한민국'])
+    newjeans_info=('뉴진스', ['민지', '다니엘', '혜인', '하니', '혜린'], ['대한민국', '호주/대한민국', '대한민국', '대한민국', '호주/베트남', '대한민국']),
+    qa_info=('QA', ['김성재', '이현호', '최민철', '이현주', '임준석'], '김성재', '이현호')
 )
 
 # 이제 두 그룹을 소개하는 메서드를 호출할 수 있습니다
@@ -61,3 +77,6 @@ print()
 group_info.introduce_redvelvet()
 print()
 group_info.introduce_newjeans()
+print()
+group_info.introduce_qa()
+print()
